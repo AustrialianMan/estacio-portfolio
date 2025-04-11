@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Thomas Bertrand Estacio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    a {
+      color: crimson;
+      text-decoration: none; 
+    }
+
+    a:hover {
+      color: #ff4d4d; 
+    }
+
+    body {
+      background-image: url('https://images4.alphacoders.com/791/791297.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: crimson;
+      font-size: 2.2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-links li a.active {
+      color: #ffd700;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .contact-form,
+    .outer-box {
+      flex: 1 1 45%;
+      min-width: 300px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .contact-form button {
+      background-color: crimson;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .outer-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    }
+
+    .outer-box h3 {
+      font-size: 1.8rem;
+      color: crimson;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      color: #ccc;
+      background: #111;
+      padding: 15px;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .fade-out {
+      animation: fadeOut 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .contact-form,
+      .outer-box {
+        flex: 1 1 100%;
+        min-width: unset;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        font-size: 1rem;
+      }
+
+      .contact-form button {
+        font-size: 1rem;
+      }
+
+      .outer-box h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="fade-in">
+  <header>
+    <div class="logo">Thomas Bertrand Estacio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-container fade-in">
+    <div class="contact-container">
+      <form class="contact-form">
+        <h2>Contact Us</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your message here"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="outer-box">
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> Estacio, Thomas Bertrand A.</p>
+        <p><strong>Email:</strong> taestacio9485qc@student.fatima.edu.ph</p>
+        <p><strong>Address:</strong> Fairmont Subdivision, Quezon City, Lagro Hilltop</p>
+        <p><strong>Phone:</strong> 09395093580</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Thomas Bertrand Estacio</p>
+  </footer>
+
+  <script>
+    // Smooth page transition
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

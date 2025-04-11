@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thomas Bertrand Estacio | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-image: url('https://preview.redd.it/some-screenshots-i-took-in-gta-v-online-1920-x-1080-taken-v0-oyvvdwm1r0v91.png?width=1920&format=png&auto=webp&s=6266085826a9a9c175db4f23de22c42a44baf50c');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: crimson;
+      font-size: 2rem;
+      font-weight: normal;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li a.active {
+      text-decoration: underline;
+      color: #ffd700;
+    }
+
+    .hero-card {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .hero-image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4444;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    }
+
+    .hero-box {
+      background: rgba(34, 34, 34, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+      padding: 25px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid #200707;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+    }
+
+    .hero-box h1 {
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .hero-box p {
+      font-size: 1.15rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 1000px;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .gallery-img {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .image-line {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ff9999;
+    }
+
+    .socials img {
+      width: 24px;
+      margin: 0 5px;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .fade-out {
+      animation: fadeOut 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    /* Mobile Responsive */
+    @media screen and (max-width: 768px) {
+      .logo {
+        font-size: 1.6rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .hero-card {
+        padding: 40px 20px;
+      }
+
+      .hero-box h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-box p {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .gallery-img {
+        max-width: 100%;
+      }
+    }
+
+    /* Very small mobile screens */
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      .hero-box h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero-box p {
+        font-size: 0.9rem;
+      }
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+  </style>
+</head>
+
+<body class="fade-in">
+  <header>
+    <div class="logo">Thomas Bertrand Estacio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-card">
+    <div class="hero-image-container">
+      <img src="images/ME.png" alt="Thomas Profile Picture" class="profile-img" />
+    </div>
+    <div class="hero-box">
+      <h1>Hi, I'm Thomas Bertrand A. Estacio</h1>
+      <p>
+        Hi, I’m Thomas Bertrand A. Estacio, a passionate Content Creator and Animator with a deep interest in philosophy, theory-making, and exploring the hidden depths of game design. With experience at Rockstar Games and aspirations to work at Valve, I thrive on pushing creative boundaries and uncovering the intricate details that make interactive experiences truly immersive.
+      </p>
+    </div>
+  </section>
+
+  <section class="card image-row">
+    <h2>Gallery</h2>
+    <div class="image-line">
+      <img src="images/Dumbells.png" alt="Project 1" class="gallery-img">
+      <img src="images/introspective thinking.png" alt="Project 2" class="gallery-img">
+      <img src="images/Globe.png" alt="Project 3" class="gallery-img">
+      <img src="images/Chad.png" alt="Project 4" class="gallery-img">
+    </div>
+  </section>
+
+  <section class="card about-section">
+    <h2>About Me</h2>
+    <img src="images/0-0.png" alt="Creative Workspace" class="about-img" />
+    <p>
+      Beyond design, I enjoy weightlifting, introspective thinking, and dissecting the impact of technology and globalization on human experiences.
+      I'm always refining my skills, seeking new challenges, and striving to create engaging, thought-provoking digital experiences.
+    </p>
+  </section>
+
+  <footer>
+    <p>Email: <a href="mailto:taestacio9485qc@student.fatima.edu.ph">taestacio9485qc@student.fatima.edu.ph</a></p>
+    <div class="socials">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/Reddit.png" alt="Reddit"></a>
+      <a href="#"><img src="images/Discord.png" alt="Discord"></a>
+      <a href="#"><img src="images/Gmail.png" alt="Gmail"></a>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // Smooth page transition with fade-out
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 800);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

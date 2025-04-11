@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience | Thomas Bertrand Estacio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    a {
+      color: crimson;
+      text-decoration: none; 
+    }
+
+    a:hover {
+      color: #ff4d4d; 
+    }
+    body {
+      background-image: url('https://images8.alphacoders.com/100/thumb-1920-1003354.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-links li a.active {
+      color: #ffd700;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 900px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .job-card {
+      margin: 30px 0;
+    }
+
+    .job-image {
+      width: 120px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+
+    .socials a img {
+      width: 40px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="audio/background-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <div class="logo">Thomas Bertrand Estacio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="card fade-in">
+    <h2>My Experience</h2>
+
+    <div class="job-card">
+      <img src="images/Rockstar games.png" alt="Rockstar Games" class="job-image" />
+      <h3>Streamer at Rockstar Games</h3>
+      <p>2019 - Today</p>
+
+      <img src="images/stream.png" alt="Streaming" class="job-image" />
+      <img src="images/steam.png" alt="Steam" class="job-image" />
+      <h3>Steam Trader</h3>
+      <p>2022 - Today</p>
+
+      <img src="images/sales.png" alt="Sales" class="job-image" />
+    </div>
+  </section>
+
+  <footer>
+    <p>Email: <a href="mailto:taestacio9485qc@student.fatima.edu.ph">taestacio9485qc@student.fatima.edu.ph</a></p>
+    <div class="socials">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/reddit.png" alt="Reddit"></a>
+      <a href="#"><img src="images/discord.png" alt="Discord"></a>
+      <a href="#"><img src="images/gmail.png" alt="Gmail"></a>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // Smooth page transition
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 800);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

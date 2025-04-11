@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | Thomas Bertrand Estacio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    a {
+      color: crimson;
+      text-decoration: none; 
+    }
+
+    a:hover {
+      color: #ff4d4d; 
+    }
+
+    body {
+      background-image: url('https://c4.wallpaperflare.com/wallpaper/268/481/137/sea-the-sky-water-the-sun-wallpaper-preview.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .card {
+      margin: 2.5rem auto;
+      padding: 2.5rem;
+      width: 80%;
+      background-color: rgba(34, 34, 34, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    .card h2 {
+      font-size: 2.6rem;
+      color: crimson;
+      margin-bottom: 1.8rem;
+    }
+
+    .outer-box {
+      border: 2px solid crimson;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .about-me h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: crimson;
+    }
+
+    .about-me p,
+    .about-me li {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: white;
+    }
+
+    .about-me ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .about-me ul li {
+      color: crimson;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .about-me img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0.5rem auto 1.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+    }
+
+    .fade {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: crimson;
+      font-size: 1.8rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-links li a.active {
+      color: #ffd700;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .socials img {
+      width: 30px;
+      margin: 5px;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .card {
+        width: 95%;
+        padding: 1.2rem;
+      }
+
+      .card h2 {
+        font-size: 2rem;
+      }
+
+      .about-me h3 {
+        font-size: 1.5rem;
+      }
+
+      .about-me p,
+      .about-me li {
+        font-size: 1.1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body class="fade">
+  <header>
+    <div class="logo">Thomas Bertrand Estacio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h2>My Resume</h2>
+
+    <div class="outer-box">
+      <div class="about-me">
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> Estacio, Thomas Bertrand A.</p>
+        <p><strong>Email:</strong> taestacio9485qc@student.fatima.edu.ph</p>
+        <p><strong>Address:</strong> Fairmont Subdivision, Quezon City, Lagro Hilltop</p>
+        <p><strong>Phone:</strong> 09395093580</p>
+        <img src="images/0p0.png" alt="Profile Image">
+      </div>
+    </div>
+
+    <div class="outer-box">
+      <div class="about-me">
+        <h3>Skills</h3>
+        <ul>
+          <li>Bodybuilding</li>
+          <img src="images/Bodybuilding.png" alt="Bodybuilding Image">
+          <li>SFM Animator</li>
+          <img src="images/SFM.png" alt="SFM Image">
+          <li>Cycling</li>
+          <img src="images/Cycling.png" alt="Cycling Image">
+        </ul>
+      </div>
+    </div>
+
+    <div class="outer-box">
+      <div class="about-me">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Designing Presentations</li>
+          <img src="images/PRESENTATION.png" alt="Presentation Image">
+          <li>Exercising</li>
+          <img src="images/Exercise.png" alt="Exercise Image">
+          <li>Editing Photos and Videos</li>
+          <img src="images/PHOTOSHOP.png" alt="Photoshop Image">
+          <li>Discipline</li>
+          <img src="images/discipline.png" alt="Discipline Image">
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Email: <a href="mailto:taestacio9485qc@student.fatima.edu.ph">taestacio9485qc@student.fatima.edu.ph</a></p>
+    <div class="socials">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/reddit.png" alt="Reddit"></a>
+      <a href="#"><img src="images/discord.png" alt="Discord"></a>
+      <a href="#"><img src="images/gmail.png" alt="Gmail"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // Smooth page transition
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 800);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

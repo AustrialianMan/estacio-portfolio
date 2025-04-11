@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education | Thomas Bertrand Estacio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    a {
+      color: crimson;
+      text-decoration: none; 
+    }
+
+    a:hover {
+      color: #ff4d4d; 
+    }
+
+    body {
+      background-image: url('https://images7.alphacoders.com/460/thumb-1920-460295.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-links li a.active {
+      color: #ffd700;
+    }
+
+    header {
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      padding: 8px 12px;
+    }
+
+    .card {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .education-card {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+    }
+
+    .education-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .education-card h3 {
+      margin-top: 1rem;
+      color: crimson;
+    }
+
+    .education-card p {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+
+    footer a {
+      color: crimson;
+    }
+
+    .socials a img {
+      width: 30px;
+      margin: 0 10px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .nav-links ul {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .education-card {
+        padding: 1rem;
+      }
+
+      .education-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .nav-links li a {
+        font-size: 1rem;
+        padding: 8px;
+      }
+
+      .education-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .education-card p {
+        font-size: 0.9rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Thomas Bertrand Estacio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h2>My Education</h2>
+    <div class="education-card">
+      <img src="images/Lagro.png" alt="Lagro High School" class="education-image"/>
+      <h3>Lagro High School (2021-2023)</h3>
+      <p>Strand: Humanities and Social Science</p>
+      <p>Years Attended: (2021-2023)</p>
+    </div>
+    <div class="education-card">
+      <img src="images/olfu.png" alt="Our Lady of Fatima University" class="education-image"/>
+      <h3>Our Lady of Fatima University</h3>
+      <p>Program: Bachelor of Science in Information and Technology (BSIT)</p>
+      <p>Years Attended: (2024-2028)</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Email: <a href="mailto:taestacio9485qc@student.fatima.edu.ph">taestacio9485qc@student.fatima.edu.ph</a></p>
+    <div class="socials">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/reddit.png" alt="Reddit"></a>
+      <a href="#"><img src="images/discord.png" alt="Discord"></a>
+      <a href="#"><img src="images/gmail.png" alt="Gmail"></a>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // Smooth page transition
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 800); // match the CSS transition duration
+        });
+      }
+    });
+  </script>
+</body>
+</html>

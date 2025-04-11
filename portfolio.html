@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Thomas Bertrand Estacio</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    body {
+      background-image: url('https://preview.redd.it/jjrxpl20pfh61.jpg?width=1080&crop=smart&auto=webp&s=3cb0adf86a1d8952ae9e3941a7e04846667923ab');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: crimson;
+      text-decoration: none; 
+    }
+
+    a:hover {
+      color: #ff4d4d; 
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .gallery-img {
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+
+    .portfolio-wrapper {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #2b0909;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .portfolio-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-header h2 {
+      font-size: 3rem; 
+      color: crimson;
+      text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    }
+
+    .portfolio-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px; 
+    }
+
+    .project-card {
+      background: rgba(34, 34, 34, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+      width: 300px;
+      padding: 25px; 
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #200707;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px; 
+    }
+
+    .project-card h3 {
+      margin: 15px 0;
+      font-size: 1.5rem; 
+      color: #fff;
+    }
+
+    .project-card p {
+      font-size: 1.2rem; 
+      color: #ffffff;
+      line-height: 1.6; 
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .portfolio-header h2 {
+        font-size: 2.2rem;
+      }
+
+      .project-card h3 {
+        font-size: 1.25rem;
+      }
+
+      .project-card p {
+        font-size: 1rem;
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-links li a.active {
+      color: #ffd700;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .socials {
+      margin-top: 10px;
+    }
+
+    .socials a img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Thomas Bertrand Estacio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="portfolio-wrapper">
+    <div class="portfolio-header">
+      <h2>My Portfolio</h2>
+    </div>
+
+    <div class="portfolio-cards">
+      <div class="project-card">
+        <img src="images/PERSONA.png" alt="YouTube Channel cover image" />
+        <h3>My Commentary - YouTube Channel</h3>
+        <p>A channel where I discuss theories, critiques, and insights into various topics.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/Chad.png" alt="Thomas blog preview" />
+        <h3>Hi, I'm Thomas - BSIT Student & Animator</h3>
+        <p>A personal blog where I explore my journey in animation and game design.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/CRYOFFEAR.png" alt="Animations and critiques preview" />
+        <h3>My Animations and Video Critics</h3>
+        <p>Showcase of my animation projects and detailed video critiques of popular media.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Email: <a href="mailto:taestacio9485qc@student.fatima.edu.ph">taestacio9485qc@student.fatima.edu.ph</a></p>
+    <div class="socials">
+      <a href="#"><img src="images/facebook.png" alt="Link to Facebook page"></a>
+      <a href="#"><img src="images/reddit.png" alt="Link to Reddit profile"></a>
+      <a href="#"><img src="images/discord.png" alt="Link to Discord server or tag"></a>
+      <a href="#"><img src="images/gmail.png" alt="Link to Gmail contact"></a>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // Smooth page transition
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 800); // match CSS transition
+        });
+      }
+    });
+  </script>
+</body>
+</html>

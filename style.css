@@ -1,0 +1,431 @@
+/* General body styling with animated gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  background: linear-gradient(145deg, #1e1f26, #2c2f3a, #1a1a1a);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: crimson;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.7rem 1.2rem;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: crimson;
+  border-radius: 8px;
+}
+
+/* Hero section - Larger fonts */
+.hero-card {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.hero-card h1 {
+  font-size: 3rem;  /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.hero-card p {
+  font-size: 1.6rem;  /* Larger font size */
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Profile image - Make it bigger */
+.profile-img {
+  width: 300px;  /* Adjust size */
+  height: 300px; /* Adjust size */
+  border-radius: 50%;
+  border: 3px solid crimson;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+/* Card section */
+section.card {
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  width: 80%;
+  background-color: rgba(34, 34, 34, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+section.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+}
+
+section.card h2 {
+  font-size: 2.8rem; /* Increased font size */
+  color: crimson;
+  margin-bottom: 1.5rem;
+}
+
+/* Section text */
+section.card p,
+section.card li {
+  font-size: 1.6rem;  /* Larger text */
+  line-height: 1.8;
+}
+
+/* About image */
+.about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Image gallery row */
+.image-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.gallery-img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background-color: rgba(18, 18, 18, 0.9);
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.socials img {
+  width: 36px;
+  margin: 0 12px;
+  transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+/* Smoother transitions */
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* Slowed from 0.3s to 0.8s */
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+/* Transition content */
+#transition-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#transition-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#transition-content.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Experience Page Card Design */
+.job-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-card {
+  background: rgba(34, 34, 34, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #200707;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.image-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.image-card h3 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.image-card p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 0;
+}
+
+.contact-form {
+  background-color: rgba(219, 155, 18, 0.842); 
+  border: 2px solid rgba(26, 18, 3, 0.76); 
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 360px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #2F3B26;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #2F3B26;
+  color: white;
+  padding: 12px;
+  width: 380px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #D4A017;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+}
+
+.contact-info a {
+  color: rgb(6, 43, 6); /* Gold color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info p {
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 19.2px;
+  line-height: 1.6;
+  background-color: rgba(224, 159, 16, 0.801); 
+  border: 2px solid rgba(0, 0, 0, 0.863); 
+  border-radius: 10px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-card {
+    padding: 3rem 1rem;
+  }
+
+  .hero-card h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-card p {
+    font-size: 1.4rem;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  section.card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .image-line {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gallery-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .image-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero-card h1 {
+    font-size: 2rem;
+  }
+
+  .hero-card p {
+    font-size: 1.2rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  section.card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+}
