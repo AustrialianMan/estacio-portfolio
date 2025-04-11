@@ -1,2 +1,2 @@
 # estacio-portfolio
-MY Portfolio by Thomas Bertrand A. Estacio
+A Portfolio made with stress and tears by Thomas Bertrand A. Estacio
